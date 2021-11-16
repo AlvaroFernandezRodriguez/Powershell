@@ -1,14 +1,17 @@
 # Scripts Powershell
-- Comandos Basicos en Powershell sobre procesos
+
+- Cmdlets basicos sobre procesos
 ```Powershell
 ps | Sort cpu -Descending | Select name,cpu
 ps | Select -First 5 | sort cpu -Descending
 ps | select | group name
 (ps | select Name).name | group
 ```
+- Identificar un proceso nuevo
+```Powershell
+ps | select StartTime,name | sort StartTime
+```
 ---------------
-
-## Vision general de PoweShell
 
 ## Cmdlets
 ### Encontrar cmdlets
@@ -16,7 +19,6 @@ ps | select | group name
 Get-Command -Noun Process
 ```
 
-------------------------------
 ------------------------------
 
 # Cmdlets para la admanistración
